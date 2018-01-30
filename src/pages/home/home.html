@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Control Acceso
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list>
+  <button ion-item *ngFor="let note of notes" (click)="detalle(note.id)">
+    {{note.title}}
+    <p>{{note.description}}</p>
+  </button>
+</ion-list>
+<div padding>
+  <button ion-button block (click)="createnote()">Nuevo trabajador</button>
+</div>
+</ion-content>
